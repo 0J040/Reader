@@ -1,0 +1,9 @@
+{
+    "java.project.outputPath": "bin"
+  }
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "C:/Users/PC/Github/Reader/lib/javafx-sdk-24/lib/*.jar"
+    ]  
+}
