@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "type": "java",
+          "name": "Run ReaderApp",
+          "request": "launch",
+          "mainClass": "ReaderApp",
+          "vmArgs": "--module-path C:/Users/PC/Github/Reader/lib/javafx-sdk-24/lib --add-modules javafx.controls,javafx.fxml"
+      }
+  ]
+}
