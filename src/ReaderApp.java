@@ -22,8 +22,13 @@ public class ReaderApp extends Application {
     private int currentVerseIndex = 0;
 
     private void applyStyles(Scene scene) {
-        String cssPath = getClass().getResource("/dark-theme.css").toExternalForm();
-        scene.getStylesheets().add(cssPath);
+        try {
+            String cssPath = getClass().getResource("/dark-theme.css").toExternalForm();
+            scene.getStylesheets().add(cssPath);
+        } catch (NullPointerException e) {
+            System.err.println("ERRO: CSS não encontrado! Verifique se o arquivo está na raiz do JAR.");
+            e.printStackTrace();
+        }
     }
 
     @Override
