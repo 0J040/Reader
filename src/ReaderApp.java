@@ -5,7 +5,6 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 import java.io.*;
-import java.net.MalformedURLException;
 import java.nio.file.*;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -23,17 +22,8 @@ public class ReaderApp extends Application {
     private int currentVerseIndex = 0;
 
     private void applyStyles(Scene scene) {
-        File cssFile = new File("src\\dark-theme.css");
-        if (cssFile.exists()) {
-            try {
-                String css = cssFile.toURI().toURL().toExternalForm();
-                scene.getStylesheets().add(css);
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            }
-        } else{
-            System.out.println("Arquivo CSS não encontrado "+ cssFile.getAbsolutePath());
-        }
+        String cssPath = getClass().getResource("/dark-theme.css").toExternalForm();
+        scene.getStylesheets().add(cssPath);
     }
 
     @Override

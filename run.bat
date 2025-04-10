@@ -1,0 +1,1 @@
+java --module-path ./javafx-sdk-24/lib --add-modules javafx.controls -jar app.jar

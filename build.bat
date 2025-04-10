@@ -1,0 +1,1 @@
+jar cvfm app.jar MANIFEST.MF -C out .
