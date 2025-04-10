@@ -1,1 +1,1 @@
-jar cvfm app.jar MANIFEST.MF -C out .
+jar cvfm app.jar MANIFEST.MF -C out . -C src dark-theme.css
